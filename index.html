@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face{
+            font-family:'TheFont';
+            src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+            format('woff2'); }
+            body.breathe-animation {
+    /* margin-left: 450px; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+  }
+
+  .breathe-animation span {
+    font-family: 'TheFont';
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    animation: letter-breathe 3s ease-in-out infinite;
+  }
+  @keyframes letter-breathe {
+    from,
+    to {
+      font-variation-settings: 'wght' 100;
+    }
+
+    50% {
+      font-variation-settings: 'wght' 900;
+    }
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    margin-top: 100px;
+    font-size: 25px;
+  }
+    </style>
+</head>
+    <body class="breathe-animation">
+        <nav class="breathe-animation">
+        <span>java script task</span>
+        </nav>
+        <a href="task2.html">task2</a><br>
+        <a href="task3.html">task3</a><br>
+        <a href="resume.html">resume</a>
+    </body>
+</html>

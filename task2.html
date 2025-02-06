@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <script>
+        //grade classification
+        var num =prompt("Enter number")
+        b=(num>=90)?"A":(num>=75)?"B":(num>=60)?"C":(num>=45)?"D":"F";      
+        console.log(b)
+        // Temperature check
+        var num=prompt("Enter number")
+        b=(num<=10)?"cold🥶🥶":(num<=20)?"cool😎😎":(num<=30)?"warm🤗🤗":"hot🥵🥵";
+        console.log(b)
+        //age group
+        var num =prompt("Enter number")
+        b=(num<=12)?"child":(num<19)?"teen":(num<65)?"Aduilt":"senior";
+        console.log(b)
+        //odd(or)even numbers
+        fornum=prompt("enter a number");
+        for(i=1;i<=20;i++){
+        if(i%2==0){
+        console.log(i)
+        }
+        }
+        var num=prompt()
+        // compares two variables using different comparison 
+        var num1= prompt("enter first number");
+        var num2= prompt("enter second number");
+        console.log(num1,">",num2,"is",num1>num2);
+        console.log(num1,"<",num2,"is",num1<num2);
+        console.log(num1,"==",num2,"is",num1==num2);
+        console.log(num1,"===",num2,"is",num1===num2);
+        console.log(num1,"!=",num2,"is",num1!=num2);
+        console.log(num1,"!==",num2,"is",num1!==num2);
+        console.log(num1,">=",num2,"is",num1>=num2);
+        console.log(num1,"<=",num2,"is",num1<=num2);
+        //ternary operator
+        var age= prompt("enter age")
+        var user=(age<=18)?"minor":"adult";
+        console.log(user)
+    </script>
+</body>
+</html>
