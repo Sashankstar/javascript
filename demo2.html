@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//        1:
+        // // uppper case
+        let str= prompt("enter your name")
+        let a=str.toUpperCase();
+        // // //lower case
+        let str2= prompt("enter your name in captials")
+        let b=str2.toLowerCase();
+        // // //reverse of a string
+        let str3=prompt("enter your number")
+        let c=str3.split('').reverse().join("");
+        // vowels checkers
+        let str6=prompt("enter you name")
+        let ch2=str6.match(/[aeiou]/ig);
+    // //    2: woard counter
+        let str5=prompt("enter your name")
+        console.log(str5.split('').length);
+        document.body.append(a)
+        document.body.append(b)
+        document.body.append(c)
+    // //  // 3:Palindrome Checker
+        let str4= prompt("enter name")
+        let d=str4. split('').reverse().join("");
+        let ch=""
+        console.log(d);
+        if(str4 === d){
+           ch +="it is a palindrome"
+        }
+        else {
+            ch +="it is not a palindrome"
+        }        
+        document.body.append(ch)
+    </script>
+</body>
+</html>

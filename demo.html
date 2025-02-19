@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <label>Enter password</label>
+        <input type="text">
+        <label>Conform password</label>
+        <div></div>
+    </form>
+    <script>
+        let a=document.querySelector("form")
+        let b=document.createElement("button")
+        let div=document.createElement("div")
+        maindiv=document.querySelector("div")
+        b.innerText="submit"
+        b.addEventListener("click", function(e){
+            if(a[0].value==a[1].value){   
+                maindiv.innerText="password matched"
+               maindiv.style.color="green"
+            }
+            else {
+                maindiv.innerText="password not matched"
+                maindiv.style.color="red"
+            }
+        })
+        // 2
+        document.forms[0].addEventListener("click",function(e){
+            var inp=document.createElement("div")
+            var inp=document.forms[0][0].value;
+            console.log(inp);
+            if(inp.length<=5){
+                maindiv.innerText="password is too weak"
+                maindiv.style.color="blue"
+                
+            }
+            else if(inp.length<=8){
+                maindiv.innerText="password is medium"
+                // inp.document.append(inp)
+            }
+            else{
+                maindiv.innerText="password is strong"
+                // inp.document.append(inp)
+                
+            }
+        })
+    // console.log(e);
+        document.body.append(b)
+        document.body.append(maindiv)
+        // document.body.append(inp)
+    </script>
+</body>
+</html>

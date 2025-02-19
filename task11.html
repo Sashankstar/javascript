@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="house1.jpg">
+    <button onclick="fun1()" id="el1">click me 1</button>
+    <button onclick="fun2()">click me 2</button>
+    <button onclick="fun3()">click me 3</button>
+    <script>
+        function fun1(){
+            let a=document.querySelector("img") 
+            a.setAttribute("src","house2.jpg")
+        }
+        function fun2(){
+            let b=document.querySelector("img")
+            b.setAttribute("src","house3.jpg")
+        }
+        function fun3(){
+            let c=document.querySelector("img")
+            c.setAttribute("src","house1.jpg")
+        }
+        let key=document.createElement("div")
+        let con=document.createElement("div")
+        key.innerText="hello world"
+        let d=document.createElement("button")
+        d.innerText="text change"
+        d.addEventListener('click',() => {
+        key.innerText='Hii every one?';
+        key.style.color="red"
+    })
+    document.body.append(key)
+    document.body.append(d)
+    </script>
+</body>
+</html>

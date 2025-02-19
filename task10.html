@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sas{
+            font-size: 20px;
+            display: flex;
+            justify-content:space-evenly;
+            position: absolute;
+            top: 1%;
+            margin-left: 85%;
+            /* position: fixed; */
+        }
+        .sas1{
+            position: absolute;
+            margin-left: 40%;
+            top: 50%;
+            font-size: 50px;
+            color: red;
+        }
+        .paratext {
+            position: absolute;
+            margin-top: -207px;
+            margin-left: 2px;
+            background-color: rgb(0, 8, 3);
+            padding: 8px;
+            color: white;
+        }
+        .imgsize{
+            display: grid;
+            grid-template-columns:auto auto;
+            justify-content: center;
+            border: 10px solid red;
+            background: blue;
+        }
+        #authors_div{
+            display:grid;
+            grid-template-columns: 310px 310px 310px 310px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        
+        // let main=document.getElementById("el1");
+        let header=document.createElement("nav")
+        header.setAttribute("tag","h1")
+        header.innerHTML="BR Architects"
+        header.style.fontSize="20px"
+        let header1=document.createElement("nav")
+        header1.innerHTML="projects.about.Contact"
+        header1.setAttribute("class","sas")
+        let a=document.createElement("img")
+        a.setAttribute("src",'https://www.w3schools.com/w3images/architect.jpg',);
+        a.style.width="1255px"
+        a.style.height="800px"
+        let b=document.createElement("p")
+        b.setAttribute("class","sas1")
+        b.innerText="Br Architects"
+        let c=document.createElement("h1")
+        c.innerHTML="Projects<hr>"
+        let img=["./house1.jpg", "./house2.jpg", "./house3.jpg", "./house4.jpg", "./house5.jpg", "./house6.jpg", "./house7.jpg", "./house8.jpg"]
+        let imgtxt=["Summer House","Brick house","Renovated","Bar House","Summer House","Brick house","Renovated","Bar House",];
+        let main = document.createElement('div');
+        let container = document.createElement('div');
+        console.log(container);
+        container.style.display="grid";
+        container.style.gridTemplateColumns="auto auto auto"
+        
+        for (i = 0; i < img.length; i++) {
+            let photoCard = document.createElement('div');
+            let img1 = document.createElement('img');
+            let para = document.createElement('p');
+            container.append(photoCard);
+            photoCard.append(img1);
+            photoCard.append(para);
+            img1.setAttribute('src', img[i]);
+            img1.setAttribute('class', 'imgsize');
+            // img1.style.border="10px solid red"
+            para.innerHTML = imgtxt[i];
+            para.setAttribute('class', 'paratext');
+        }
+        let d=document.createElement("h1")
+        d.innerText="About"
+        let e=document.createElement("p")
+        e.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<hr>"
+        let  author_imgs=["./team1.jpg","./team2.jpg","./team3.jpg","./team4.jpg"]
+        let authors_names=["John Deo","Jane Doe","Mike Rose","Dan Star"]
+        let author_desg=["CEO&Founder","Architest","Architest","Architest"]
+        let authors_div = document.createElement('div');
+        authors_div.setAttribute('id','authors_div')
+        for (let i = 0; i < author_imgs.length; i++) {
+            let author_card = document.createElement('div');
+            author_card.style.cssText = 'margin: 20px;';
+            let author_image = document.createElement('img');
+            author_image.src = author_imgs[i];
+            author_image.style.cssText = 'width: 300px; height: 200px;';
+            let author_name = document.createElement('p');
+            author_name.innerHTML = authors_names[i];
+            let author_des = document.createElement('p');
+            author_des.innerHTML = author_desg[i];
+            let author_bio = document.createElement('p');
+            author_bio.innerHTML = 'Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.';
+            let contact_button = document.createElement('button');
+            contact_button.innerHTML = 'Contact';
+            contact_button.style.cssText = 'text-align: center; width:290px; height: 40px; background-color: rgba(128, 128, 128,0.2); border: none; font-size: 16px';
+            contact_button.addEventListener('mouseenter', () => {
+                contact_button.style.backgroundColor = 'rgba(128, 128, 128,0.5)';
+            });
+            contact_button.addEventListener('mouseleave', () => {
+                contact_button.style.backgroundColor = 'rgba(128, 128, 128,0.2)';
+            });
+
+            author_card.append(author_image, author_name, author_des, author_bio, contact_button);
+            authors_div.append(author_card);
+        }
+        let contact_head = document.createElement('p');
+        contact_head.innerHTML = 'Contact';
+        contact_head.setAttribute('class','Projectss')
+        
+
+        let contact_txt = document.createElement('p');
+        contact_txt.innerHTML = 'Let get in touch and talk about your proejct';
+        contact_txt.style.cssText = 'font-size:18px;font-weight:550;margin-left:30px;';
+
+        let input_div = document.createElement('div');
+        let input1 = document.createElement('input');
+        input1.setAttribute('placeholder', "Name");
+        input1.setAttribute('class', 'input_style');
+
+        let input2 = document.createElement('input');
+        input2.setAttribute('placeholder', "Email");
+        input2.setAttribute('class', 'input_style');
+
+        let input3 = document.createElement('input');
+        input3.setAttribute('placeholder', "Subject");
+        input3.setAttribute('class', 'input_style');
+
+        let input4 = document.createElement('input');
+        input4.setAttribute('placeholder', "Comment");
+        input4.setAttribute('class', 'input_style');
+
+        input_div.append(input1, input2, input3, input4);
+        input_div.style.cssText = 'display:flex;flex-direction:column;row-gap:20px;margin:30px 30px ;';
+
+        let send = document.createElement('button');
+        send.innerText = "Send Message";
+        send.setAttribute('class','sends')
+        send.addEventListener('mouseenter', () => {
+            send.style.backgroundColor = 'grey';
+            send.style.Color = 'black';
+        });
+        send.addEventListener('mouseleave', () => {
+            send.style.backgroundColor = 'black';
+        });
+        let map = document.createElement('img');
+        map.src = './map.jpg';
+        map.style.width="1250px"
+        map.style.height="500px"
+        map.setAttribute('class','maps')
+
+        let foot = document.createElement("div");
+        foot.innerHTML = 'Powered by <u>w3.css</u>';
+        foot.setAttribute('id','foot');
+        foot.style.backgroundColor="black"
+        foot.style.color="white"
+        foot.style.textAlign="center"
+
+
+        console.log(header);      
+        console.log(header1);
+        console.log(a);
+        console.log(c);
+        
+        document.body.append(header)
+        document.body.append(header1)
+        document.body.append(a)
+        document.body.append(b)
+        document.body.append(c)
+        // document.body.append(imagesize)
+        document.body.append(container)
+        document.body.append(d)
+        document.body.append(e)
+        document.body.append(authors_div)
+        document.body.append(contact_head)
+        document.body.append(contact_txt)
+        document.body.append(input_div)
+        document.body.append(map)
+        document.body.append(foot)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5];
+        let arr2=arr.map((val,ind,arr)=>{
+            return val+2
+        })
+        let arr3=arr.map((val,ind,arr)=>{
+            return val**2
+        })
+        let arr4=arr.filter((val,ind,arr)=>{
+            return val%2==0
+        })
+        let array=["hi","hello","apple","hello world","sashank"]
+        let arr5=array.filter((val,ind,arr)=>{
+            return val.length>5
+        })
+        sum=0
+        let arr6=arr.reduce((acc,val,ind,arr)=>{
+            return (sum+=val);
+        },0);
+        let arr7=arr.reduce((acc,val)=>{
+            return (sum/arr.length)
+        })
+        let array1=[{name:"john", age:17},{name:"jane", age:22},{name:"jim" ,age:15},{name:"jack",age:19}];
+        let arr8=array1.filter((val,ind,arr)=>{
+            return val.age > 18;
+        })
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        console.log(arr5);
+        console.log(arr6);
+        console.log(arr7);
+        console.log(arr8);
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

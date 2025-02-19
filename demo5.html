@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        color: green;
+        font-size: 40px;
+        /* border: 1px solid; */
+    }
+</style>
+<body>
+    <div class="container">
+    <div class="hours"></div>
+    <div class="minutes"></div>
+    <div class="sec"></div>
+    </div>
+    <script>
+        function time(value){
+            return value<10?"0"+value :value;
+        }
+        setInterval(() => {
+        let present= new Date();
+        let h = time(present.getHours());
+        let min = time(present.getMinutes());
+        let sec = time(present.getSeconds());
+
+
+        document.getElementsByClassName("hours")[0].innerHTML = h+":"
+        document.getElementsByClassName("minutes")[0].innerHTML = min+":"
+        document.getElementsByClassName("sec")[0].innerHTML = sec;
+        
+        },1000);
+         // let time.(present.getSeconds());
+        // 
+        // hours.innerHTML=present.getHours()+":"
+        // console.log(hours);
+        // min.innerHTML=present.getMinutes()+":"
+        // sec.innerHTML=present.getSeconds()
+        // }, 1000);
+
+    </script>
+</body>
+</html>
