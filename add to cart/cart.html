@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+        img{
+            width: 100px;
+        }
+        .sas{
+            /* width: 100px; */
+            color: red;
+            font-size: 40px;
+            margin-left: 490px;
+        }
+        a{
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>!! Yours Orders Will display here !!</h1>
+    <script>
+        let a=JSON.parse(localStorage.getItem("card"))
+        console.log(a);
+        let newdata=a.map((val)=>{
+            console.log(val);            
+            let container=document.createElement("div");
+            let child=document.createElement("div")
+            let img=document.createElement("img")
+            let childa=document.createElement("div")
+            let childb=document.createElement("div")
+            let childc=document.createElement("div")
+            let childd=document.createElement("div")
+            
+            img.src=val.image;
+            childa.innerText=val.title
+            childb.innerText=val.price
+            childc.innerText=val.description
+            childd.innerText=val.category
+            child.append(img,childa,childb,childc,childd,)
+            
+            container.appendChild(child)
+            
+            // console.log(container)
+            document.body.append(container)
+        })
+    </script>
+<!-- <button class="sas">payment</button> -->
+<button class="sas">
+    <a href="order.html">order</a>
+</button>
+</body>
+</html>
